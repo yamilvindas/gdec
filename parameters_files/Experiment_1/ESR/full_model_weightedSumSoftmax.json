@@ -1,0 +1,53 @@
+{
+  "exp_id": "Exp1_FullModel_WeightedSumWithSoftmax_ESR",
+  "features_types": ["RawSignal", "Spectrogram"],
+  "add_channel_dim": "True",
+
+  "dataset_type": "EEGEpilepticSeizure",
+  "binarizeDS": true,
+
+  "n_fft": 32,
+  "n_overlap": 4,
+  "window": "blackman",
+
+  "in_channels": 1,
+
+  "lr": 3e-1,
+  "nb_repetitions": 1,
+  "weight_decay": 1e-4,
+  "batch_size_train": 32,
+  "batch_size_test": 32,
+  "nb_epochs": 200,
+  "loss_function": "CE",
+
+  "use_iterated_loss": "True",
+  "model_apply_iterated_loss": "rawEncoder+specEncoder",
+  "importance_iterated_loss_spec": 1e-2,
+  "importance_iterated_loss_raw": 1.0,
+
+  "use_DEC": "True",
+  "alpha_dec": 1.0,
+  "epoch_init_dec_loss": 50,
+  "models_to_apply_DEC": ["Encoder"],
+  "importance_dec": {"Encoder": 1e-4},
+
+  "model_type": "Hybrid",
+  "model_to_use": "BiModalCNNTransformer_Raw+Spec",
+  "nhead": 4,
+  "d_hid": 64,
+  "nlayers": 4,
+  "dropout": 0.3,
+  "nb_features_projection": 4,
+  "d_model_raw": 64,
+  "classification_pool": "ClassToken",
+  "n_conv_layers": 2,
+  "nb_init_filters": 64,
+  "increase_nb_filters_mode": "multiplicative",
+  "pooling_mode": "maxpool",
+  "dim_common_space": 64,
+  "fusion_strategy": "weightedSumWithSoftmax",
+
+  "separate_val_ds": false,
+  "percentage_samples_keep": 0.1,
+  "dataset_folder": "../../../data/EEG_Epileptic_Seizure_Recognition/"
+}

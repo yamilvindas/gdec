@@ -1,0 +1,31 @@
+{
+  "exp_id": "Exp1_LateFusion_PTB",
+  "features_types": ["RawSignal", "Spectrogram"],
+  "add_channel_dim": "True",
+
+  "dataset_type": "EcgCategorization",
+  "subdataset": "PTB",
+
+  "n_fft": 32,
+  "n_overlap": 4,
+  "window": "blackman",
+
+  "in_channels": 1,
+
+  "lr": 1e-2,
+  "nb_repetitions": 1,
+  "weight_decay": 1e-8,
+  "batch_size_train": 16,
+  "batch_size_test": 16,
+  "nb_epochs": 15,
+  "loss_function": "CE",
+
+  "params_exp_file_1": "../../../results/Experiment_1/Exp1_ClassicSpec_PTB/params_exp/params_0.pth",
+  "params_exp_file_2": "../../../results/Experiment_1/Exp1_RawSignal_PTB/params_exp/params_0.pth",
+  "model_weights_file_1": "../../../results/Experiment_1/Exp1_ClassicSpec_PTB/model/final_model_Exp1_ClassicSpec_PTB_rep-0.pth",
+  "model_weights_file_2": "../../../results/Experiment_1/Exp1_RawSignal_PTB/model/final_model_Exp1_RawSignal_PTB_rep-0.pth",
+
+  "separate_val_ds": false,
+  "percentage_samples_keep": 1.0,
+  "dataset_folder": "../../../data/ECG_Heartbeat_Categorization_Dataset/"
+}

@@ -1,0 +1,35 @@
+{
+  "exp_id": "Exp1_RawSignal_PTB",
+  "feature_type": "RawSignal",
+  "add_channel_dim": "False",
+
+  "dataset_type": "EcgCategorization",
+  "subdataset": "PTB",
+
+  "in_channels": 1,
+
+  "lr": 1e-1,
+  "nb_repetitions": 1,
+  "weight_decay": 1e-7,
+  "batch_size_train": 32,
+  "batch_size_test": 32,
+  "nb_epochs": 150,
+  "loss_function": "CE",
+
+  "use_DEC": "False",
+
+  "model_type": "Transformer",
+  "model_to_use": "RawAudioMultiChannelCNN",
+  "nhead": 8,
+  "d_hid": 64,
+  "nlayers": 8,
+  "dropout": 0.1,
+  "nb_features_projection": 10,
+  "d_model": 128,
+  "classification_pool": "ClassToken",
+  "n_conv_layers": 4,
+
+  "separate_val_ds": false,
+  "percentage_samples_keep": 0.1,
+  "dataset_folder": "../../../data/ECG_Heartbeat_Categorization_Dataset/"
+}

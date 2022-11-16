@@ -1,0 +1,35 @@
+{
+  "exp_id": "Exp1_RawSignal_ESR",
+  "feature_type": "RawSignal",
+  "add_channel_dim": "False",
+
+  "dataset_type": "EEGEpilepticSeizure",
+  "binarizeDS": true,
+
+  "in_channels": 1,
+
+  "lr": 3e-1,
+  "nb_repetitions": 1,
+  "weight_decay": 1e-4,
+  "batch_size_train": 64,
+  "batch_size_test": 64,
+  "nb_epochs": 100,
+  "loss_function": "CE",
+
+  "use_DEC": "False",
+
+  "model_type": "Transformer",
+  "model_to_use": "RawAudioMultiChannelCNN",
+  "nhead": 4,
+  "d_hid": 8,
+  "nlayers": 4,
+  "dropout": 0.3,
+  "nb_features_projection": 4,
+  "d_model": 64,
+  "classification_pool": "ClassToken",
+  "n_conv_layers": 2,
+
+  "separate_val_ds": false,
+  "percentage_samples_keep": 1.0,
+  "dataset_folder": "../../../data/EEG_Epileptic_Seizure_Recognition/"
+}

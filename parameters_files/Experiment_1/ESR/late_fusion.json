@@ -1,0 +1,31 @@
+{
+  "exp_id": "Exp1_LateFusion_ESR",
+  "features_types": ["RawSignal", "Spectrogram"],
+  "add_channel_dim": "True",
+
+  "dataset_type": "EEGEpilepticSeizure",
+  "binarizeDS": true,
+
+  "n_fft": 32,
+  "n_overlap": 4,
+  "window": "blackman",
+
+  "in_channels": 1,
+
+  "lr": 1e-3,
+  "nb_repetitions": 1,
+  "weight_decay": 1e-8,
+  "batch_size_train": 32,
+  "batch_size_test": 32,
+  "nb_epochs": 15,
+  "loss_function": "CE",
+
+  "params_exp_file_1": "../../../results/Experiment_1/Exp1_ClassicSpec_ESR/params_exp/params_0.pth",
+  "params_exp_file_2": "../../../results/Experiment_1/Exp1_RawSignal_ESR/params_exp/params_0.pth",
+  "model_weights_file_1": "../../../results/Experiment_1/Exp1_ClassicSpec_ESR/model/final_model_Exp1_ClassicSpec_ESR_rep-9.pth",
+  "model_weights_file_2": "../../../results/Experiment_1/Exp1_RawSignal_ESR/model/final_model_Exp1_RawSignal_ESR_rep-9.pth",
+
+  "separate_val_ds": false,
+  "percentage_samples_keep": 1.0,
+  "dataset_folder": "../../../data/EEG_Epileptic_Seizure_Recognition/"
+}

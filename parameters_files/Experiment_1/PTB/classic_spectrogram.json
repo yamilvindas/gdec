@@ -1,0 +1,33 @@
+{
+  "exp_id": "Exp1_ClassicSpec_PTB",
+  "feature_type": "Spectrogram",
+  "add_channel_dim": "True",
+
+  "dataset_type": "EcgCategorization",
+  "subdataset": "PTB",
+
+  "n_fft": 32,
+  "n_overlap": 4,
+  "window": "blackman",
+
+  "lr": 1e-4,
+  "nb_repetitions": 1,
+  "weight_decay": 1e-7,
+  "batch_size_train": 32,
+  "batch_size_test": 32,
+  "nb_epochs": 50,
+  "loss_function": "CE",
+
+  "use_DEC": "False",
+
+  "model_type": "2DCNN",
+  "model_to_use": "TimeFrequency2DCNN",
+  "nb_init_filters": 64,
+  "increase_nb_filters_mode": "multiplicative",
+  "pooling_mode": "maxpool",
+  "dropout_probability": 0.2,
+
+  "separate_val_ds": false,
+  "percentage_samples_keep": 0.1,
+  "dataset_folder": "../../../data/ECG_Heartbeat_Categorization_Dataset/"
+}
