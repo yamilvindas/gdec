@@ -4,3 +4,4 @@
 ./results/Experiment_1/Exp*
 ./results/Experiment_2/Exp*
 ./results/Experiment_3/Exp*
+*__pycache__*
