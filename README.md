@@ -48,7 +48,7 @@ Our method is composed of five modules:
 ## IV) Code Sturcture
 
 - data: This folder will store the different datasets used to test our proposed method.
-- src: This folder contains the source codes necessary to run the different experiment. More details about this folder can be found in the README.md file of this folder.
+- src: This folder contains the source codes necessary to run the different experiment. 
 - parameters_files: This folder contains json files with the parameters of different experiments. 
 - results: This folder will store results of the different experiments.
 - figs: This fodler contains the different figures used as illustrations in this Git repository.
