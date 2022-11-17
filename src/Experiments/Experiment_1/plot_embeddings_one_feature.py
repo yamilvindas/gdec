@@ -231,7 +231,7 @@ class Experiment(object):
             print("Number of samples in the validation dataset: ", len(self.val_ds))
 
         # Determining the audio shape for the selected time-frequency representation
-        sample, label, _ = self.train_ds[0]
+        sample, label = self.train_ds[0]
         self.audio_feature_shape = sample.shape
         print("Shape of the used representation: {}".format(self.audio_feature_shape))
 

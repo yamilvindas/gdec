@@ -676,6 +676,11 @@ def main():
 
     #==========================================================================#
     if (parameters_file is None):
+        # Downloading the datasets
+        download_dataset(dataset_name='ecg_categorization', local_data_directory='../../../data/')
+        download_dataset(dataset_name='ESR', local_data_directory='../../../data/')
+        
+        # Downloading the models
         print("\n\n===> WARNING: no parameters file was given, insted of running the experiment, we are going to download pre-computed results !\n\n")
         download_results_experiment(experiment_name='Exp-1_LateFusion', local_data_directory='../../../results/')
     else:
