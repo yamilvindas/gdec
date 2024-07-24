@@ -143,4 +143,4 @@ Finally, our method can be applied to single feature models (but it has not been
 
 ## VI) Contact
 
-If you need help to use our repository or if you find any bugs, do not hesitate to contact us (yamil(dot)vindas(at)creatis.insa-lyon.fr).
+If you need help to use our repository or if you find any bugs, do not hesitate to contact us (yamil(dot)vindas-yassine(at)inria.fr).
